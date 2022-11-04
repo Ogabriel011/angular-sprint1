@@ -1,0 +1,49 @@
+.corTitulo{
+    color: rgb(13, 15, 133);
+}
+
+#cardCentral{
+    max-width: 400px;
+    margin: auto;
+    width: 60%;
+    margin-top: 1%;
+}
+
+.tamanhoTitulo{
+    font-size: large;
+}
+
+.largura100{
+    width: 100%;
+}
+
+.largura50{
+    width: 50%;
+}
+
+.ajusteBotao{
+    background-color: rgb(13, 15, 133);
+    color: white;
+    margin: 0 auto;
+    display: block;
+}
+
+.margintop5{
+    margin-top: 5%;
+}
+
+.tamanhoRodape{
+    font-size: small;
+}
+
+.centralizartexto{
+    text-align: center;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form.field-label{
+    color: rgb(13, 15, 133)!important;
+}
+
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple{
+    color: rgb(13, 15, 133)!important;
+}

@@ -1,0 +1,33 @@
+header{
+    max-width: 1440px;
+    height: 200px;
+    background-color: #9bd2de;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.logo{
+    padding-left: 150px;
+}
+
+.logo p{
+    font-family: 'Roboto';
+    font-size: 20px;
+    width: 500px;
+}
+
+.atalhos{
+    padding-right: 150px;
+    display: flex;
+    padding-bottom: 80px;
+}
+
+.atalhos a{
+    margin-right: 40px;
+    text-decoration: none;
+    color: black;
+    font-family:'Roboto';
+    font-size: 18px;
+}

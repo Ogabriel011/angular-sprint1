@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    max-width: 1440px;
+    height: 100px;
+    display: flex;
+    border: 2px solid black;
+    padding-left: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.atalhos{
+display: flex;
+padding-right: 100px;
+}
+
+.atalhos a{
+    margin-right: 30px;
+    text-decoration: none;
+    color: black;
+    font-family: poiret one;
+    font-size: 24px;
+}
+
+@media(max-width:715px){
+    header{
+        flex-direction: column;
+        height: 200px;
+        padding: 0;
+    }
+
+    .atalhos{
+        flex-direction: column;
+    }
+}

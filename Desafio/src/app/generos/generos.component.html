@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+<main>
+
+    <form [formGroup]="form">
+    <div class="titulo_img">
+        <h1>Gêneros</h1><br>
+        <img src="../../assets/imagens/theater 1.png">
+    </div>
+
+    <h2>Cadastrar gênero</h2>
+
+    <div class="input_e_botao">
+        <input type="text" name="genero" id="genero" placeholder="Gênero" formControlName="genero">
+        <button id="salvar">Salvar</button>
+    </div>
+
+    <div class="generos_cadastrados">
+        <div class="generos">
+            <p>Terror</p>
+            <p>Ação</p>
+            <p>Comédia</p>
+        </div>
+
+        <div class="botoes_editar">
+            <button class="editar">Editar</button>
+            <button class="editar">Editar</button>
+            <button class="editar">Editar</button>
+        </div>
+
+        <div class="botoes_excluir">
+            <button class="excluir">Excluir</button>
+            <button class="excluir">Excluir</button>
+            <button class="excluir">Excluir</button>
+        </div>
+    </div>
+    </form>
+</main>

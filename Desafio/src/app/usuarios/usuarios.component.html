@@ -1,0 +1,60 @@
+<app-header></app-header>
+
+<main>
+
+    <form [formGroup]="form">
+    <h1>Cadastro</h1>
+
+    <div class="cadastro">
+        <div class="nome">
+            <label for="Nome">Nome:</label><br>
+            <input type="text" name="Nome" id="Nome" formControlName="nome">
+        </div>
+
+        <div class="email">
+            <label for="Email">E-mail:</label><br>
+            <input type="email" name="Email" id="Email" formControlName="email">
+        </div>
+
+        <div class="telefone">
+            <label for="Telefone">Telefone:</label><br>
+            <input type="text" name="Telefone" id="Telefone" formControlName="telefone">
+        </div>
+    </div>
+
+    <button type="submit" id="cadastrar">Cadastrar</button>
+
+
+    <div class="informacoes">
+        <div class="nomes">
+            <p>Paulo Andre</p>
+            <p>Marcos Lucio</p>
+            <p>Laura Port</p>
+        </div>
+
+        <div class="emails">
+            <p>paulo@gmail.com</p>
+            <p>marcos@gmail.com</p>
+            <p>laura@gmail.com</p>
+        </div>
+
+        <div class="telefones">
+            <p>3349 6788</p>
+            <p>3349 6788</p>
+            <p>3349 6788</p>
+        </div>
+
+        <div class="botoes_editar">
+            <button class="editar">Editar</button>
+            <button class="editar">Editar</button>
+            <button class="editar">Editar</button>
+        </div>
+
+        <div class="botoes_excluir">
+            <button class="excluir">Excluir</button>
+            <button class="excluir">Excluir</button>
+            <button class="excluir">Excluir</button>
+        </div>
+    </div>
+</form>   
+</main>

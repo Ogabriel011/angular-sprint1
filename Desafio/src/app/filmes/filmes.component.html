@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<main>
+
+    <form [formGroup]="form">
+    <div class="titulo_e_img">
+        <h1>Filmes</h1><br>
+        <img src="../../assets/imagens/cinema 1.png">
+    </div>
+
+    <h2>Cadastrar Filmes</h2>
+
+    <div class="infs">
+        <input type="text" name="Titulo" id="titulo" placeholder="Título do Filme" formControlName="filme">
+        <select name="genero" id="genero" formControlName="genero">
+            <option value="genero">Gênero</option>
+            <option value="terror">Terror</option>
+            <option value="acao">Ação</option>
+            <option value="comedia">Comédia</option>
+        </select>
+        <button type="submit" id="salvar">Salvar</button>
+    </div>
+
+
+    <div class="filmes">
+        <div class="titulos">
+            <p>Os outros</p>
+            <p>Até o último homem</p>
+            <p>O máscara</p>
+        </div>
+
+        <div class="genero">
+            <p>Terror</p>
+            <p>Ação</p>
+            <p>Comédia</p>
+        </div>
+
+        <div class="botoes_editar">
+            <button class="editar">Editar</button>
+            <button class="editar">Editar</button>
+            <button class="editar">Editar</button>
+        </div>
+
+        <div class="botoes_excluir">
+            <button class="excluir">Excluir</button>
+            <button class="excluir">Excluir</button>
+            <button class="excluir">Excluir</button>
+        </div>
+    </div>
+    </form>
+</main>

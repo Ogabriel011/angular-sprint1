@@ -1,0 +1,42 @@
+<mat-card><mat-card-title class="corTitulo">Edusync Bank</mat-card-title></mat-card>
+
+
+<form [formGroup]="form" (ngSubmit)="SalvarDadosCliente()"> 
+    <mat-card id="cardCentral">    
+        <mat-card-content>
+            <mat-card-subtitle class="corTitulo tamanhoTitulo">Criar uma conta</mat-card-subtitle>
+            
+            <mat-form-field class="largura100">
+                <mat-label>Como devemos te chamar?</mat-label>
+                <input matInput formControlName="nome" name="nome" class="inputs" required>
+                <mat-error>{{error}}</mat-error>
+            </mat-form-field>
+            
+            <mat-form-field class="largura100">
+                <mat-label>E-mail:</mat-label>
+                <input matInput formControlName="email" name="email" class="inputs" type="email" placeholder="exemplo@exemplo.com" required>
+                <mat-error *ngIf="form.get('email')?.hasError('required') || form.get('email')?.hasError('email')">{{ValidaEmail()}}</mat-error>
+            </mat-form-field>
+            
+            <mat-form-field class="largura100">
+                <mat-label>Senha:</mat-label>
+                <input matInput formControlName="senha" name="senha" type="password"class="inputs" required>
+                <mat-error>{{error}}</mat-error>
+            </mat-form-field>
+            
+            <mat-form-field class="largura100">
+                <mat-label>Confirmar senha:</mat-label>
+                <input matInput formControlName="confirmacaoSenha" name="confirmacaoSenha" type="password" class="inputs" (keyup)="ValidaSenhas()" required>
+                <mat-error *ngIf="form.get('confirmacaoSenha')?.hasError('camposDivergentes')">{{ValidaSenhas()}}</mat-error>
+            </mat-form-field>
+        </mat-card-content>
+    
+        <button mat-flat-button type="submit" class="largura50 ajusteBotao" [disabled]="!form.valid">Criar Conta</button>
+
+        <mat-card-content class="margintop5 tamanhoRodape">
+            <div class="centralizartexto">
+                Já tem conta? <a routerLink="../login">Acesse aqui</a>.
+            </div>
+        </mat-card-content>
+    </mat-card>
+ </form>

@@ -1,0 +1,138 @@
+
+
+main{
+    max-width: 1440px;
+    border: 2px solid black;
+    padding-bottom:100px ;
+}
+
+.subtitulo{
+    font-family: poiret one;
+    font-size: 50px;
+    text-align: center;
+}
+
+.ajuste{
+    font-family: quicksand;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 70px;
+}
+
+.informacoes{  
+    display: flex;
+    justify-content: space-around;
+}
+
+.direita{
+    width: 400px;
+}
+
+.esquerda{
+    width: 400px;
+}
+
+.RS{
+    margin: 0;
+    margin-top:15px ;
+    font-size: 20px;
+    color: #F87700;
+}
+
+.valor{
+    margin: 0;
+    font-size:36px ;
+    color: #F87700;
+}
+
+.editar{
+    width: 128px;
+    height: 42px;
+    margin-left: 15px;
+    border-radius: 25px;
+    background-color: #AED9E0;
+    border: #AED9E0;
+    
+}
+
+.editar:hover{
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: white;
+}
+
+.excluir{
+    margin-left: 15px;
+    width: 128px;
+    height: 42px;
+    border-radius: 25px;
+    background-color: #F87700;
+    border: #F87700;
+}
+
+.excluir:hover{
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: white;
+}
+
+.cadastrar{
+    width: 100%;
+    display: flex;
+    font-family: quicksand;
+    font-size: 20px;
+}
+
+.ajustarTudo{
+    width: 100%;
+    display: flex;
+    padding-left:180px ;
+    align-items: center;
+}
+
+input{
+    width: 200px;
+    color:#660027;
+    border: #660027 1.5px solid;
+    border-radius: 4px;
+}
+
+#bolo{
+    padding-right: 100px;
+}
+
+#preco{
+    padding-right: 100px;
+}
+
+.ajustarTudo button{
+    width: 128px;
+    height: 42px;
+    color: white;
+    background-color: #660027;
+    border-radius: 25px;
+    border: #660027;
+}
+.ajustarTudo button:hover{
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: white;
+    color: black;
+}
+
+@media(max-width:850px){
+    .ajuste{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cadastrar{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .ajustarTudo{
+        flex-direction: column;
+        padding-left: 0;
+    }
+}

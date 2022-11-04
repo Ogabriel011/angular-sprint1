@@ -1,0 +1,27 @@
+footer{
+    max-width: 1440px;
+    height: 200px;
+    background-color: #f6511d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.logo{
+    padding-bottom: 75px;
+}
+
+.linha{
+    width: 2px;
+    height: 170px;
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.texto{
+    font-family: "roboto";
+    font-size: 18px;
+    color: white;
+}
