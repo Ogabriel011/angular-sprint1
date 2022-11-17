@@ -27,15 +27,16 @@ h2{
 }
 
 input{
-    width: 400px;
+    width: 40%;
     height: 40px;
 }
 
 p{
     width: 150px;
+    margin: 0;
 }
 
-#salvar{
+.salvar{
     width: 180px;
     height: 46px;
     background-color: #f6511d;
@@ -43,7 +44,7 @@ p{
     border: #f6511d;
 }
 
-#salvar:hover{
+.salvar:hover{
     cursor: pointer;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     background-color: white;
@@ -52,41 +53,26 @@ p{
 }
 
 .generos_cadastrados{
+    width: 100%;
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .generos{
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    width: 150px;
-    height: 150px;
+    align-content: center;
+    margin-bottom: 20px;
     align-items: center;
 }
 
-.botoes_editar{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 650px;
-    height: 150px;
-    align-items: flex-end;
-}
-
-.botoes_excluir{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 150px;
-    height: 150px;
-    align-items: center;
-}
 
 .editar{
     width: 125px;
     height: 35px;
+    margin-left: 50%;
     background-color: #f6511d;
     color: white;
     border-radius: 20px;
@@ -118,4 +104,34 @@ p{
     background-color: white;
     color: black;
     border: black solid 1px;
+}
+
+.navegacao{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+#pag_anterior{
+    width: 200px;
+    height: 35px;
+    background-color: #f6511d;
+    color: white;
+    border-radius: 10px;
+    border: #f6511d;
+    transition-duration: 0.5s;
+}
+
+#pag_anterior:hover{
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: white;
+    color: black;
+    border: black solid 1px;
+    
+} 
+
+a{
+    text-decoration: none;
+    color: black;
 }

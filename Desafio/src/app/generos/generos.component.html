@@ -11,28 +11,24 @@
     <h2>Cadastrar gênero</h2>
 
     <div class="input_e_botao">
-        <input type="text" name="genero" id="genero" placeholder="Gênero" formControlName="genero">
-        <button id="salvar">Salvar</button>
+        <input type="text" name="genero" id="genero" placeholder="Gênero" formControlName="genero" required>
+        <button class="salvar" (click)="SalvarGeneros()" *ngIf="!verificarEditar">Salvar</button>
+        <button class="salvar" (click)="EditarGenero1()" *ngIf="verificarEditar">Editar</button>
     </div>
+</form>
 
     <div class="generos_cadastrados">
-        <div class="generos">
-            <p>Terror</p>
-            <p>Ação</p>
-            <p>Comédia</p>
-        </div>
 
-        <div class="botoes_editar">
-            <button class="editar">Editar</button>
-            <button class="editar">Editar</button>
-            <button class="editar">Editar</button>
+        <div class="generos" *ngFor="let item of generos; index as i;">
+            <p>{{item.genero}}</p>
+            <button class="editar" (click)="EditarGenero2(item)">Editar</button>
+            <button class="excluir" (click)="ExcluirGenero(item.id)">Excluir</button>
         </div>
-
-        <div class="botoes_excluir">
-            <button class="excluir">Excluir</button>
-            <button class="excluir">Excluir</button>
-            <button class="excluir">Excluir</button>
-        </div>
+        
     </div>
-    </form>
+
+    <div class="navegacao">
+        <button id="pag_anterior"><a routerLink="/filmes">Página Anterior</a></button>
+    </div>
+
 </main>

@@ -1,60 +1,47 @@
 <app-header></app-header>
 
 <main>
-
+ 
     <form [formGroup]="form">
     <h1>Cadastro</h1>
 
     <div class="cadastro">
         <div class="nome">
             <label for="Nome">Nome:</label><br>
-            <input type="text" name="Nome" id="Nome" formControlName="nome">
+            <input type="text" name="Nome" id="Nome" formControlName="nome" required>
         </div>
 
         <div class="email">
             <label for="Email">E-mail:</label><br>
-            <input type="email" name="Email" id="Email" formControlName="email">
+            <input type="email" name="Email" id="Email" formControlName="email" required>
         </div>
 
         <div class="telefone">
             <label for="Telefone">Telefone:</label><br>
-            <input type="text" name="Telefone" id="Telefone" formControlName="telefone">
+            <input type="text" name="Telefone" id="Telefone" formControlName="telefone" required>
         </div>
     </div>
 
-    <button type="submit" id="cadastrar">Cadastrar</button>
-
-
+    <button type="submit" class="cadastrar" (click)="SalvarDadosCliente()" *ngIf="!verificarEditar">Cadastrar</button>
+    <button type="submit" class="cadastrar" (click)="EditarCliente1()" *ngIf="verificarEditar">Editar</button>
+</form>
+    
+    
     <div class="informacoes">
-        <div class="nomes">
-            <p>Paulo Andre</p>
-            <p>Marcos Lucio</p>
-            <p>Laura Port</p>
+        
+        <div class="cadastros" *ngFor="let item of clientes; index as i;">
+            <p>{{item.nome}}</p>
+            <p>{{item.email}}</p>
+            <p>{{item.telefone}}</p>
+            <button class="editar" (click)="EditarCliente2(item)">Editar</button>
+            <button class="excluir" (click)="ExcluirCliente(item.id)">Excluir</button>
         </div>
-
-        <div class="emails">
-            <p>paulo@gmail.com</p>
-            <p>marcos@gmail.com</p>
-            <p>laura@gmail.com</p>
-        </div>
-
-        <div class="telefones">
-            <p>3349 6788</p>
-            <p>3349 6788</p>
-            <p>3349 6788</p>
-        </div>
-
-        <div class="botoes_editar">
-            <button class="editar">Editar</button>
-            <button class="editar">Editar</button>
-            <button class="editar">Editar</button>
-        </div>
-
-        <div class="botoes_excluir">
-            <button class="excluir">Excluir</button>
-            <button class="excluir">Excluir</button>
-            <button class="excluir">Excluir</button>
-        </div>
+     
     </div>
-</form>   
+
+    <div class="navegacao">
+        <button id="pag_anterior"><a routerLink="/home">Página Anterior</a></button>
+        <button id="proxima_pag"><a routerLink="/filmes">Próxima Página</a></button>
+    </div>
+
 </main>

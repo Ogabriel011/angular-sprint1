@@ -1,5 +1,5 @@
 header{
-    max-width: 1440px;
+    width: 100%;
     height: 200px;
     background-color: #9bd2de;
     display: flex;
@@ -9,7 +9,8 @@ header{
 }
 
 .logo{
-    padding-left: 150px;
+    width: 40%;
+    padding-left: 10%;
 }
 
 .logo p{
@@ -19,9 +20,9 @@ header{
 }
 
 .atalhos{
-    padding-right: 150px;
+    padding-right: 9%;
     display: flex;
-    padding-bottom: 80px;
+    padding-bottom: 20px;
 }
 
 .atalhos a{

@@ -11,41 +11,30 @@
     <h2>Cadastrar Filmes</h2>
 
     <div class="infs">
-        <input type="text" name="Titulo" id="titulo" placeholder="Título do Filme" formControlName="filme">
-        <select name="genero" id="genero" formControlName="genero">
-            <option value="genero">Gênero</option>
-            <option value="terror">Terror</option>
-            <option value="acao">Ação</option>
-            <option value="comedia">Comédia</option>
+        <input type="text" name="nome" id="nome" placeholder="Título do Filme" formControlName="nome" required>
+        <select name="genero" id="genero" formControlName="genero" required>
+        <option [value]="item.id" *ngFor="let item of generos; index as i;">{{item.genero}}</option>
         </select>
-        <button type="submit" id="salvar">Salvar</button>
-    </div>
-
-
-    <div class="filmes">
-        <div class="titulos">
-            <p>Os outros</p>
-            <p>Até o último homem</p>
-            <p>O máscara</p>
-        </div>
-
-        <div class="genero">
-            <p>Terror</p>
-            <p>Ação</p>
-            <p>Comédia</p>
-        </div>
-
-        <div class="botoes_editar">
-            <button class="editar">Editar</button>
-            <button class="editar">Editar</button>
-            <button class="editar">Editar</button>
-        </div>
-
-        <div class="botoes_excluir">
-            <button class="excluir">Excluir</button>
-            <button class="excluir">Excluir</button>
-            <button class="excluir">Excluir</button>
-        </div>
+        <button type="submit" class="salvar" (click)="SalvarDadosFilmes()" *ngIf="!verificarEditar">Salvar</button>
+        <button type="submit" class="salvar" (click)="EditarFilme1()" *ngIf="verificarEditar">Editar</button>
     </div>
     </form>
+
+
+    <div class="ajuste_filmes">
+
+        <div class="filmes" *ngFor="let item of filmes; index as i;" >
+            <p>{{item.nome}}</p>
+            <p>{{item.genero?.genero}}</p>
+            <button class="editar" (click)="EditarFilme2(item)">Editar</button>
+            <button class="excluir" (click)="ExcluirFilme(item.id)">Excluir</button>
+        </div>
+        
+    </div>
+
+    <div class="navegacao">
+        <button id="pag_anterior"><a routerLink="/usuarios">Página Anterior</a></button>
+        <button id="proxima_pag"><a routerLink="/generos">Próxima Página</a></button>
+    </div>
+
 </main>

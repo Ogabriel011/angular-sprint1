@@ -1,0 +1,23 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Gabriel",
+      "email": "biel.patricio06@gmail.com",
+      "telefone": "11960948543"
+    }
+  ],
+  "filmes": [
+    {
+      "id": 1,
+      "nome": "Os outros",
+      "generoId": "1"
+    }
+  ],
+  "generos": [
+    {
+      "id": 1,
+      "genero": "Aventura"
+    }
+  ]
+}
